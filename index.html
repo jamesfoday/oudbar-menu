@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#10110f">
+    <title>OU D’BAR · The Night, Curated</title>
+    <meta
+      name="description"
+      content="OU D’BAR digital lounge menu design concept."
+    >
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"></div>
+
+    <header>
+      <a class="brand" href="#" aria-label="OU D’BAR Startseite">
+        <img src="assets/logo.webp" alt="OU D’BAR">
+        <span>COCKTAIL & SHISHA BAR</span>
+      </a>
+      <div class="header-right">
+        <span class="location">WIESBADEN · RHEINSTRASSE 17–19</span>
+        <button class="wifi-open small">⌁ <span>Gäste-WLAN</span> ↗</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> YOUR EVENING. YOUR RITUAL.</p>
+          <h1>Die Nacht.<br><em>Dein Geschmack.</em></h1>
+          <p class="intro">Ein Drink. Ein Moment. Deine Auszeit.<br>Entdecke die Genusswelten von OU D’BAR.</p>
+          <div class="hero-actions">
+            <a class="primary" href="#menu">Karte entdecken <span>↗</span></a>
+            <button class="text-button wifi-open">⌁ Mit der Nacht verbinden</button>
+          </div>
+          <div class="hero-meta">
+            <span>01 — MIXOLOGY</span>
+            <span>02 — SHISHA</span>
+            <span>03 — VIBES</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit-dot"></div>
+          <div class="visual-label">THE OU D’BAR EXPERIENCE <span>✧</span></div>
+          <div class="photo-frame">
+            <img src="assets/cocktail-monograph.jpg" alt="Cocktail-Kunst bei OU D’BAR">
+            <div class="photo-shade"></div>
+            <div class="photo-caption">
+              <p>CRAFTED FOR THE NIGHT</p>
+              <h2>Etwas Besonderes.<br><em>Mit jedem Schluck.</em></h2>
+            </div>
+          </div>
+          <div class="float-chip top-chip">
+            <span>✧</span>
+            <div>Signature moments<small>HANDWERK. CHARAKTER. GENUSS.</small></div>
+          </div>
+          <div class="float-chip bottom-chip"><span class="dot"></span> COCKTAIL · SHISHA · VIBES <span>↗</span></div>
+          <span class="coord">50°04′ N &nbsp; 08°14′ E</span>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">01 / DIE KARTE</p>
+            <h2>Finde deinen <em>Favoriten.</em></h2>
+          </div>
+          <label class="search">
+            <span>⌕</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Karte durchsuchen"
+              aria-label="Karte durchsuchen"
+            >
+            <kbd>⌘ K</kbd>
+          </label>
+        </div>
+
+        <div class="menu-layout">
+          <aside>
+            <p class="aside-label">GENUSSWELTEN <span>10</span></p>
+            <nav id="categories" aria-label="Menükategorien"></nav>
+            <a
+              class="social-link"
+              href="https://www.instagram.com/ou_d_bar/"
+              target="_blank"
+              rel="noopener"
+            >◎ &nbsp; @ou_d_bar <span>↗</span></a>
+          </aside>
+
+          <div class="menu-content">
+            <div class="content-heading">
+              <div>
+                <p class="eyebrow" id="category-subtitle"></p>
+                <h3 id="category-title"></h3>
+              </div>
+              <span id="count"></span>
+            </div>
+            <p class="demo-note">
+              DESIGNVORSCHAU · Beispielauswahl, keine verbindliche Speisekarte.
+              Preise und Sortiment folgen nach Freigabe.
+            </p>
+            <div class="cards" id="cards"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="connect-banner">
+        <div class="banner-icon">⌁</div>
+        <div>
+          <p class="eyebrow">STAY A LITTLE LONGER</p>
+          <h2>Guter Empfang. <em>Gute Gesellschaft.</em></h2>
+          <p>Entdecke unsere Instagram-Welt und den Zugang zum Gäste-WLAN.</p>
+        </div>
+        <button class="primary wifi-open">WLAN entdecken ↗</button>
+      </section>
+    </main>
+
+    <footer>
+      <span>OU D’BAR <small>COCKTAIL & SHISHA BAR</small></span>
+      <p>Eine gute Nacht beginnt mit gutem Geschmack.</p>
+      <a href="https://official.oudbar.de/" target="_blank" rel="noopener">Zur Website ↗</a>
+      <span class="concept">DESIGN CONCEPT · 2026</span>
+    </footer>
+
+    <nav class="mobile-dock" aria-label="Schnellnavigation">
+      <a href="#menu">☷ <span>Karte</span></a>
+      <button id="saved">♡ <span>Favoriten</span></button>
+      <button class="wifi-open">⌁ <span>WLAN</span></button>
+    </nav>
+
+    <dialog id="item-dialog">
+      <button class="close" aria-label="Schließen">×</button>
+      <img id="detail-image" alt="">
+      <div class="dialog-body">
+        <p class="eyebrow">DIE BEISPIELAUSWAHL</p>
+        <h2 id="detail-title"></h2>
+        <p id="detail-description"></p>
+        <p class="fine">
+          Sortiment, Preise, Zutaten und Allergenangaben werden mit der finalen
+          Karte bestätigt. Bitte frage unser Team.
+        </p>
+        <button id="save-item" class="primary">♡ Favorit merken</button>
+      </div>
+    </dialog>
+
+    <dialog id="wifi-dialog">
+      <button class="close" aria-label="Schließen">×</button>
+      <div class="dialog-body">
+        <p class="eyebrow">OU D’BAR / GUEST CONNECTION</p>
+        <div class="prototype-label">INTERAKTIVE DEMO · KEINE LIVE-VERBINDUNG</div>
+        <div class="journey-progress" aria-label="Ablauf">
+          <span>01 FOLLOW</span>
+          <span>02 DM</span>
+          <span>03 WLAN</span>
+        </div>
+        <div id="wifi-stage" aria-live="polite"></div>
+        <p class="fine demo-disclaimer">
+          Instagram-Ereignisse, persönliche Links und WLAN-Zugang werden hier
+          simuliert. Es werden keine echten Follows geprüft und keine Nachrichten
+          verschickt.
+        </p>
+        <button class="text-button skip">Direkt zur Karte →</button>
+        <button class="text-button restart-demo">Demo neu starten ↺</button>
+      </div>
+    </dialog>
+
+    <div id="toast" role="status"></div>
+  </body>
+</html>
