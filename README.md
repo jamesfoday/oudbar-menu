@@ -20,7 +20,7 @@ Open http://localhost:5500 . Stop the server with Ctrl+C.
 - `index.html`: page and dialog structure.
 - `style.css`: visual styling and responsive layouts.
 - `app.js`: menu examples, search, favorites, and simulated Wi-Fi journey.
-- `assets/`: original OU D’BAR logo and site photographs used in this prototype.
+- `assets/`: original OU D’BAR logo and site photographs, a local SVG favicon and logo fallback, and category illustrations in `illustrations/`. Interface icons are defined as reusable SVG symbols in `index.html`.
 
 ## GitHub
 
@@ -47,6 +47,7 @@ Use the DNS targets provided by the chosen host for `oudbar.jamesfoday.com`; do 
 ## Prototype limits
 
 Menu items and imagery are illustrative; prices and confirmed item-level photographs are not supplied.
+Categories without supplied photographs use matching SVG illustrations. Failed image loads fall back to category artwork, with an inline icon behind each menu image as a final fallback.
 Instagram follows, notifications, DMs, access links and Wi-Fi connection are simulated locally.
 The live system requires account eligibility checks, Meta/Instagram integration, device/session association and supported guest-router authorization. Existing followers and unavailable notifications need fallback access.
 Favorites are saved only in this browser's local storage. No backend or credentials are included.

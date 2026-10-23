@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="title">
+  <title id="title">OU D’BAR</title>
+  <rect width="180" height="120" rx="20" fill="#141a13"/>
+  <rect x="5" y="5" width="170" height="110" rx="16" fill="none" stroke="#d7bd87" stroke-opacity=".5"/>
+  <text x="90" y="65" text-anchor="middle" fill="#d7bd87" font-family="Georgia, serif" font-size="32">OU D’BAR</text>
+  <text x="90" y="86" text-anchor="middle" fill="#c2c5b1" font-family="Arial, sans-serif" font-size="7" letter-spacing="2">COCKTAIL &amp; SHISHA BAR</text>
+</svg>

@@ -9,3 +9,252 @@ body{background:#0d100e;isolation:isolate}body:before{content:'';position:fixed;
 @keyframes orbit-turn{to{transform:rotate(390deg)}}@keyframes glass-float{0%,100%{translate:0 0}50%{translate:0 -9px}}
 @media(max-width:1100px){.menu-layout{grid-template-columns:165px 1fr;padding:20px;gap:20px}.top-chip{padding:16px}.bottom-chip{padding:19px}.card-media{height:145px}}
 @media(max-width:760px){.menu-layout{padding:16px;border-radius:16px;margin:0 -8px}.top-chip{right:0;top:22px;padding:16px}.bottom-chip{left:0;bottom:0;padding:18px}.orbit-one{border-color:#e5ca8280}.hero-visual{margin:22px 0 28px}.card-media{height:155px}.card-body{padding:12px}.menu-section{padding-top:28px}.hero h1{font-size:56px}.hero:before{display:none}#categories{margin-right:-16px}.connect-banner{overflow:hidden}.float-chip{backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px)}}
+
+/* Local SVG icons and category artwork. */
+.hero {
+  overflow-x: clip;
+}
+
+.icon-definitions {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
+.icon.is-filled,
+.mobile-dock .is-active > .icon {
+  fill: currentColor;
+}
+
+.small,
+.location,
+.social-link,
+.hero-meta > span,
+.journey-progress > span,
+footer > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.small > .icon,
+.primary > .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.text-button > .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.text-button > .icon:last-child {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.hero-meta {
+  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 25px);
+}
+
+.hero-meta > span {
+  gap: 5px;
+}
+
+.hero-meta .icon {
+  width: 13px;
+  height: 13px;
+  color: var(--gold);
+}
+
+.visual-label > .icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 30px;
+}
+
+.top-chip > .icon {
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+}
+
+.bottom-chip > .icon {
+  width: 17px;
+  height: 17px;
+  margin-left: 25px;
+}
+
+.search > .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--gold);
+}
+
+.category {
+  gap: 9px;
+}
+
+.category > .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.category-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.category > .arrow {
+  width: 13px;
+  height: 13px;
+}
+
+.social-link {
+  display: flex;
+}
+
+.social-link > .social-arrow {
+  margin-left: auto;
+  color: var(--gold);
+}
+
+.heart,
+.close {
+  display: grid;
+  place-items: center;
+}
+
+.heart > .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.close > .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.card-bottom > .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.card-media > img,
+.detail-media > img {
+  position: relative;
+}
+
+.image-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: radial-gradient(ellipse at center, #424a32, #111710);
+  color: var(--gold);
+}
+
+.image-fallback > .icon {
+  width: 58px;
+  height: 58px;
+  stroke-width: 1.2;
+}
+
+.image-fallback > span {
+  font: 20px 'Cormorant Garamond', Georgia, serif;
+}
+
+.detail-media {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.detail-media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-media > img[hidden] {
+  display: none;
+}
+
+.banner-icon > .icon {
+  width: 34px;
+  height: 34px;
+}
+
+.mobile-dock .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.wifi-symbol > .icon {
+  width: 50px;
+  height: 50px;
+}
+
+.journey-progress .icon {
+  width: 13px;
+  height: 13px;
+}
+
+.event-card.verified > .icon {
+  width: 25px;
+  height: 25px;
+  color: var(--gold);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 35px 20px;
+  border: 1px dashed #d7bd8733;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.empty > .icon {
+  width: 30px;
+  height: 30px;
+  color: var(--gold);
+}
+
+.empty > p {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .location {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .social-link {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title">
+  <title id="title">Bier &amp; Wein · OU D’BAR Illustration</title>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="70%">
+      <stop stop-color="#4b513a"/>
+      <stop offset="1" stop-color="#111710"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#glow)"/>
+  <circle cx="240" cy="136" r="100" fill="none" stroke="#d7bd87" stroke-opacity=".16"/>
+  <circle cx="240" cy="136" r="84" fill="#d7bd87" fill-opacity=".035" stroke="#d7bd87" stroke-opacity=".26"/>
+  <circle cx="338" cy="114" r="3" fill="#d7bd87"/>
+  <path d="M56 136h65 M359 136h65" stroke="#d7bd87" stroke-opacity=".18"/>
+  <g transform="translate(192 88) scale(4)" fill="none" stroke="#e2cd9f" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 3h10l1 5a6 6 0 0 1-12 0l1-5Z M6 8h12 M12 14v7 M8 21h8"/>
+  </g>
+  <text x="240" y="258" fill="#e2cd9f" font-family="Georgia, serif" font-size="22" text-anchor="middle">Bier &amp; Wein</text>
+  <text x="240" y="282" fill="#a6ae98" font-family="Arial, sans-serif" font-size="8" letter-spacing="3" text-anchor="middle">OU D’BAR · THE NIGHT, CURATED</text>
+</svg>
